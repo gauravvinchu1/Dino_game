@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dino Hunter: Survival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="score-container">
+                <div class="label">PREDATOR SCORE</div>
+                <div id="score-value">000</div>
+            </div>
+            <div id="size-container">
+                <div class="label">DINO SIZE</div>
+                <div id="size-value">Lv 1</div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay active">
+            <div class="overlay-content">
+                <h1 class="game-title">DINO HUNGER</h1>
+                <p class="game-description">Eat the small. Avoid the big.</p>
+                <div class="controls-info">
+                    <p>WASD or Arrow Keys to Hunt</p>
+                </div>
+                <button id="start-button" class="btn">Start Hunting</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay">
+            <div class="overlay-content">
+                <h2 class="game-over-title">EXTINCT</h2>
+                <div class="final-stats">
+                    <p>Predator Score: <span id="final-score">0</span></p>
+                    <p>Record: <span id="high-score">0</span></p>
+                </div>
+                <button id="restart-button" class="btn">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Touch Controls -->
+        <div id="touch-controls" class="hidden">
+            <div id="joystick-base">
+                <div id="joystick-knob"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
